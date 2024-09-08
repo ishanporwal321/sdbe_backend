@@ -1,0 +1,15 @@
+venv/
+env/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.aws/
+*.aws
+new_env/
