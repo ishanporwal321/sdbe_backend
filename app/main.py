@@ -62,9 +62,11 @@ index = None
 
 # Load job data from a JSON file
 def load_jobs(file_name="jobs.json"):
-    with open(file_name, "r") as f:
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(script_dir, file_name)
+    with open(file_path, "r") as f:
         jobs = json.load(f)
-    logging.info(f"Loaded {len(jobs)} jobs from {file_name}")
+    logging.info(f"Loaded {len(jobs)} jobs from {file_path}")
     return jobs
 
 # Convert job descriptions into embeddings and store them in FAISS
